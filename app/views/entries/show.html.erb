@@ -1,29 +1,37 @@
-<p id="notice"><%= notice %></p>
+<% content_for :title do %>
+  <%= @entry.meal_type %> &ndash; <%= DateTime.now.to_formatted_s(:nice_date) %>
+  <% end %>
 
-<p>
-  <strong>Meal type:</strong>
-  <%= @entry.meal_type %>
-</p>
+<div class="columns mt-4 is-centered">
+  <div class="column is-one-third">
+    <nav class="panel is-link">
+      <p class="panel-heading">
+        <%= @entry.meal_type %>
+      </p>
 
-<p>
-  <strong>Calories:</strong>
-  <%= @entry.calories %>
-</p>
+      <div class="panel-block">
+        Calories: <%= @entry.calories %>
+      </div>
 
-<p>
-  <strong>Protein:</strong>
-  <%= @entry.protein %>
-</p>
+      <div class="panel-block">
+        Protein: <%= @entry.protein %>
+      </div>
 
-<p>
-  <strong>Carbs:</strong>
-  <%= @entry.carbs %>
-</p>
+      <div class="panel-block">
+        Carbs: <%= @entry.carbs %>
+      </div>
 
-<p>
-  <strong>Fats:</strong>
-  <%= @entry.fats %>
-</p>
+      <div class="panel-block">
+        Fats: <%= @entry.fats %>
+      </div>
+    </nav>
 
-<%= link_to 'Edit', edit_entry_path(@entry) %> |
-<%= link_to 'Back', entries_path %>
+      <div class="columns is-mobile">
+        <div class="column"> 
+          <%= link_to 'Edit', edit_entry_path(@entry), class: "button is-grey has-text-weight-bold" %>
+          <%= link_to 'Delete', entries_path(@entry), method: :delete, data: { confirm: "Are you sure?" } , class: "button is-danger has-text-weight-bold" %>
+        </div>
+      </div>
+
+  </div>
+</div>
