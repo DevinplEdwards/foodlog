@@ -1,5 +1,5 @@
 <% content_for :title do %>
-  Foodlog &ndash; <%= DateTime.now.to_formatted_s(:nice_date) %>  
+  Foodlog &ndash; <%= DateTime.now.to_formatted_s(:nice_date) %>
 <% end %>
 <h1 class="title">Entries</h1>
 
@@ -27,4 +27,8 @@
       </div>
     </div>
     <% end %>
+</div>
+
+<div class="columns is-centered mt-6">
+  <%= link_to "View all entries", archives_index_path, class: "button is-link is-outlined is-centered" %>
 </div>
