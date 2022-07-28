@@ -1,20 +1,19 @@
 body {
-  background-color: #fff;
+  background-color: #fcf9e9;
   color: #333;
-  margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 18px;
 }
 
 pre {
-  background-color: #eee;
+  background-color: #fff;
   padding: 10px;
   font-size: 11px;
 }
@@ -67,7 +66,7 @@ div {
     text-align: left;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
-    font-size: 12px;
+    font-size: 18px;
     margin: -7px -7px 0;
     background-color: #c00;
     color: #fff;
@@ -81,4 +80,8 @@ div {
 
 label {
   display: block;
+}
+
+.hero.is-primary {
+  background: #e40c07;
 }
