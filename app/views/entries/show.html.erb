@@ -6,7 +6,8 @@
   <div class="column is-one-third">
     <nav class="panel is-link">
       <p class="panel-heading">
-        <%= @entry.meal_type %>
+        <%= @entry.meal_type %>:
+        <%= @entry.category.title if @entry.category.present? %>
       </p>
 
       <div class="panel-block">
@@ -27,7 +28,7 @@
     </nav>
 
       <div class="columns is-mobile">
-        <div class="column"> 
+        <div class="column">
           <%= link_to 'Edit', edit_entry_path(@entry), class: "button is-grey has-text-weight-bold" %>
           <%= link_to 'Delete', entries_path(@entry), method: :delete, data: { confirm: "Are you sure?" } , class: "button is-danger has-text-weight-bold" %>
         </div>
